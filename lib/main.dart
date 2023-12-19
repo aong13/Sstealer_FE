@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sstealer/sstealer_page.dart';
+import 'navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SstealerPage(),
+      home: const Navigation(),
     );
   }
 }
