@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/toggle_btn.dart';
-import '../widgets/usage_card.dart';
+import '../../widgets/toggle_btn.dart';
+import '../../widgets/usage_card.dart';
 import 'usage_ssteal_page.dart';
 
 class UsagePage extends StatefulWidget {

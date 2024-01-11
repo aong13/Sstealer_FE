@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/usage_card.dart';
-import 'sstealer_detail_page.dart';
+import '../../widgets/usage_card.dart';
+import '../sstealer/sstealer_detail_page.dart';
 
 class UsageSstealPage extends StatelessWidget {
 

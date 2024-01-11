@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'request_page.dart';
-import 'package:sstealer/screens/sstealer_page.dart';
-import 'usage_page.dart';
-import 'my_page.dart';
+import 'home/home_page.dart';
+import 'request/request_page.dart';
+import 'sstealer/sstealer_page.dart';
+import 'usage/usage_page.dart';
+import 'mypage/my_page.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({super.key});

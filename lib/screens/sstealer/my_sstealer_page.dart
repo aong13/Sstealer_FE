@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:horizontal_stepper_flutter/horizontal_stepper_flutter.dart';
-import 'sstealer_detail_page.dart';
+import '../sstealer/sstealer_detail_page.dart';
 
 class MySstealerPage extends StatelessWidget {
   final int toggleIndex;
