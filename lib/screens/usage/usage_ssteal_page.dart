@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sstealer/screens/usage/usage_detail_page.dart';
 import '../../widgets/usage_card.dart';
 import '../sstealer/sstealer_detail_page.dart';
 
@@ -30,7 +31,7 @@ class UsageSstealPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SstealerDatailPage(),
+                              builder: (context) => UsageDatailPage(),
                             ),
                           );
                         },

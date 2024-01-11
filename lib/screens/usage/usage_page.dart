@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'usage_detail_page.dart';
 import '../../widgets/toggle_btn.dart';
 import '../../widgets/usage_card.dart';
 import 'usage_ssteal_page.dart';
@@ -13,10 +14,9 @@ class _UsagePageState extends State<UsagePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3F3F3),
+      backgroundColor: Color(0xFFF3F3F3),
       body: Column(
         children: [
-          // 상단 토글 버튼
           ToggleButton(
             toggleIndex: toggleIndex,
             onToggle: (index) {
@@ -33,14 +33,24 @@ class _UsagePageState extends State<UsagePage> {
                 Container(
                   child: Center(
                     child: (ListView.builder(
-                        itemCount: 5,
-                        itemBuilder: (context, index) {
-                          return UsageCard(
-                            date: '11. 18 (토) 신청중',
-                            address: '부산 남구 용소로 45 부경아파트 101동 101호',
-                            price: '4000원',
-                          );
-                        })),
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UsageDatailPage(),
+                                ),
+                              );
+                            },
+                            child: UsageCard(
+                              date: '11. 18 (토) 신청중',
+                              address: '부산 남구 용소로 45 부경아파트 101동 101호',
+                              price: '4000원',
+                            ));
+                      },)
+                    ),
                   ),
                 ),
                 UsageSstealPage(
@@ -53,10 +63,8 @@ class _UsagePageState extends State<UsagePage> {
                   },
                 ),
               ],
-            ),
-          ),
+            ),),
         ],
       ),
     );
-  }
-}
+  }}
