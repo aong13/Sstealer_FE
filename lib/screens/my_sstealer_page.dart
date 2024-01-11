@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:horizontal_stepper_flutter/horizontal_stepper_flutter.dart';
-import 'package:sstealer/sstealer_detail_page.dart';
+import 'sstealer_detail_page.dart';
 
 class MySstealerPage extends StatelessWidget {
   final int toggleIndex;
@@ -44,6 +44,7 @@ class MySstealerPage extends StatelessWidget {
     );
   }
 }
+
 class MySstealerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
