@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/toggle_btn.dart';
+import '../widgets/usage_card.dart';
 import 'usage_ssteal_page.dart';
 
 class UsagePage extends StatefulWidget {
@@ -34,52 +35,11 @@ class _UsagePageState extends State<UsagePage> {
                     child: (ListView.builder(
                         itemCount: 5,
                         itemBuilder: (context, index) {
-                          return Card(
-                            //하나의 요청내역
-                              margin: EdgeInsets.all(12),
-                              color: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(16),
-                                child:
-                                Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '11. 18 (토) 신청중',
-                                      style: TextStyle(
-                                        color: Color(0xFF797979),
-                                        fontSize: 15,
-                                        fontFamily: 'Inter',
-                                        fontWeight: FontWeight.w300,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    SizedBox(height: 8),
-                                    Text(
-                                        '부산 남구 용소로 45 부경아파트 101동 101호',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 20,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w700,
-                                          height: 0,
-                                        ),
-                                    ),
-                                    SizedBox(height: 8),
-                                    Text(
-                                      '4000원',
-                                      style: TextStyle(
-                                        color: Color(0xFF5192AC),
-                                        fontSize: 15,
-                                        fontFamily: 'Inter',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ));
+                          return UsageCard(
+                            date: '11. 18 (토) 신청중',
+                            address: '부산 남구 용소로 45 부경아파트 101동 101호',
+                            price: '4000원',
+                          );
                         })),
                   ),
                 ),
