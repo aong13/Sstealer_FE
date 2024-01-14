@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sstealer/widgets/timer_widget.dart';
 
 class UsageDatailPage extends StatelessWidget {
   const UsageDatailPage({Key? key}) : super(key: key);
@@ -41,28 +42,44 @@ class UsageDatailPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                Text(
-                  '예상 수거 시간',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                  ),
+                SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center, // 세로 가운데 정렬
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '예상 수거 시간',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          '11월 18일 오후 5시',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                    TimerWidget(remainingTime: "2시간 40분"),
+                  ],
                 ),
-                Text(
-                  '11월 18일 오후 5시',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
+                Divider(
+                  color: Colors.grey,  // 회색으로 지정
+                  thickness: 0.5,      // 가로선의 두께
+                  height: 40,          // 가로선 위 아래의 여백
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 24, bottom: 24),
+                  padding: EdgeInsets.only(bottom: 24),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -116,7 +133,7 @@ class UsageDatailPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '쓰틸할 쓰레기를 선택하세요',
+                  '쓰틸 목록',
                   style: TextStyle(
                     color: Color(0xFF5192AC),
                     fontSize: 16,
@@ -208,6 +225,11 @@ class UsageDatailPage extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
+                    Divider(
+                      color: Colors.grey,
+                      thickness: 0.5,
+                      height: 20,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -229,6 +251,11 @@ class UsageDatailPage extends StatelessWidget {
                           ),
                         )
                       ],
+                    ),
+                    Divider(
+                      color: Colors.grey,
+                      thickness: 0.5,
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
